@@ -1,5 +1,6 @@
 package com.sothree.slidinguppanel;
 
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ListView;
@@ -28,6 +29,15 @@ public class ScrollableViewHelper {
                 return scrollableView.getScrollY();
             } else {
                 ScrollView sv = ((ScrollView) scrollableView);
+                View child = sv.getChildAt(0);
+                return (child.getBottom() - (sv.getHeight() + sv.getScrollY()));
+            }
+        } else if (scrollableView instanceof NestedScrollView) {
+            // TODO
+            if (isSlidingUp) {
+                return scrollableView.getScrollY();
+            } else {
+                NestedScrollView sv = ((NestedScrollView) scrollableView);
                 View child = sv.getChildAt(0);
                 return (child.getBottom() - (sv.getHeight() + sv.getScrollY()));
             }

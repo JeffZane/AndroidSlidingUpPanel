@@ -1,0 +1,78 @@
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sliding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    sothree:umanoDragView="@+id/scrollView"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="68dp"
+    sothree:umanoScrollableView="@+id/scrollView"
+    sothree:umanoShadowHeight="0dp"
+    >
+
+    <!-- MAIN CONTENT -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            sothree:theme="@style/ActionBar"
+            />
+
+        <TextView
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="Main Content"
+            android:textSize="16sp"
+            />
+    </FrameLayout>
+
+    <!-- SLIDING LAYOUT -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99000000"
+        >
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:minHeight="68dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam eu dolor ut pulvinar. Morbi interdum, orci quis ultrices volutpat, neque enim pellentesque elit, eget sollicitudin neque ante et enim. Aenean vel enim dolor. Praesent hendrerit congue tortor et finibus. Mauris urna dui, volutpat interdum ex at, cursus rutrum turpis. Donec laoreet id turpis eleifend congue. Nulla et enim non mi hendrerit ullamcorper tempor quis lacus. Nullam lobortis eros mauris, quis efficitur ipsum imperdiet sed. Etiam in gravida eros, non commodo dolor. Cras eros odio, hendrerit sed vulputate malesuada, auctor vitae est. Donec accumsan erat sit amet elit tempus pretium.
+
+Ut sollicitudin mi at quam dictum sodales. Nunc semper nulla pharetra suscipit lacinia. Proin a molestie neque. Etiam sit amet velit et enim vestibulum dictum pellentesque vel sapien. Fusce elit turpis, imperdiet vel pharetra nec, dapibus porta odio. Pellentesque tincidunt, orci ac porta porta, nulla sapien mattis sem, quis condimentum erat nunc quis lectus. Maecenas molestie metus sed ipsum rhoncus, quis mollis velit tristique. Pellentesque pharetra varius erat, id placerat massa tincidunt vel. Proin quis lorem ut sem fermentum fringilla nec quis velit. Nulla sed ullamcorper leo. Nullam sit amet eros sed augue imperdiet aliquet ac sit amet eros.
+
+Maecenas et malesuada neque, at venenatis lacus. Ut posuere dui nibh, vitae faucibus erat pulvinar sed. Aliquam bibendum euismod risus, in condimentum erat fringilla ut. Sed efficitur sagittis elit et faucibus. Sed sit amet pellentesque arcu. Sed in enim odio. Phasellus vel metus eu leo mattis mattis sit amet ac risus. Proin luctus sagittis suscipit.
+
+Duis bibendum, sem quis fermentum suscipit, risus risus congue urna, eget suscipit turpis risus nec eros. Phasellus sollicitudin est nec tempor luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam facilisis, libero a congue rutrum, magna nisi placerat mauris, sed lacinia lacus nisi eu lorem. In fringilla vulputate erat, sed mattis dui posuere id. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec laoreet maximus sem, eget aliquam diam tempor vel. Vivamus a arcu ipsum. Nullam rutrum, lacus ut pretium vestibulum, purus metus luctus nibh, eget condimentum ligula enim vitae mauris. Sed justo erat, porta ac ante a, tincidunt cursus odio. Quisque in tortor nec lorem vestibulum ultrices ac at ipsum. Curabitur a pellentesque nisl. In in orci finibus, aliquam turpis vitae, vehicula turpis.
+
+Morbi accumsan ornare augue eu molestie. Mauris leo risus, ullamcorper a sapien vitae, semper rhoncus lectus. Curabitur dui erat, accumsan non porta vel, blandit non felis. Ut sed velit quis justo varius vestibulum nec in felis. Quisque a eros in nisi pretium tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut venenatis odio ante, ut molestie libero tempor eget."
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
+            />
+    </ScrollView>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

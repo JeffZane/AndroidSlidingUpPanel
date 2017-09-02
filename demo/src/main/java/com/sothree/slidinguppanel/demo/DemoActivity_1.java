@@ -26,15 +26,15 @@ import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState;
 import java.util.Arrays;
 import java.util.List;
 
-public class DemoActivity extends ActionBarActivity {
-    private static final String TAG = "DemoActivity";
+public class DemoActivity_1 extends ActionBarActivity {
+    private static final String TAG = "DemoActivity_1";
 
     private SlidingUpPanelLayout mLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo);
+        setContentView(R.layout.activity_demo_1);
 
         setSupportActionBar((Toolbar) findViewById(R.id.main_toolbar));
 
@@ -42,7 +42,7 @@ public class DemoActivity extends ActionBarActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(DemoActivity.this, "onItemClick", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DemoActivity_1.this, "onItemClick", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -84,6 +84,7 @@ public class DemoActivity extends ActionBarActivity {
         lv.setAdapter(arrayAdapter);
 
         mLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
+        mLayout.setClipPanel(false);
         mLayout.addPanelSlideListener(new PanelSlideListener() {
             @Override
             public void onPanelSlide(View panel, float slideOffset) {
